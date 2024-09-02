@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Nitro Tiger/ESP Project/ESP_Button/main
+# Install script for directory: C:/Users/Nitro Tiger/ESP Project/ESP_GPIO/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
