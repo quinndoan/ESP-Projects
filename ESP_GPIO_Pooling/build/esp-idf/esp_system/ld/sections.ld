@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: C:\Users\Nitro Tiger\ESP Project\ESP_GPIO_InterruptButton\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: C:\Users\Nitro Tiger\ESP Project\ESP_GPIO_Pooling\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

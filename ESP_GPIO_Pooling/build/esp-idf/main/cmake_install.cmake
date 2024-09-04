@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Nitro Tiger/ESP Project/ESP_GPIO_InterruptButton/main
+# Install script for directory: C:/Users/Nitro Tiger/ESP Project/ESP_GPIO_Pooling/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
