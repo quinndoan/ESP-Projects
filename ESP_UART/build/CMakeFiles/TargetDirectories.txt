@@ -811,10 +811,3 @@ C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/main/CMakeFiles/list_ins
 C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/main/CMakeFiles/install.dir
 C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/main/CMakeFiles/install/local.dir
 C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/main/CMakeFiles/install/strip.dir
-C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/serial/CMakeFiles/__idf_serial.dir
-C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/serial/CMakeFiles/edit_cache.dir
-C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/serial/CMakeFiles/rebuild_cache.dir
-C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/serial/CMakeFiles/list_install_components.dir
-C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/serial/CMakeFiles/install.dir
-C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/serial/CMakeFiles/install/local.dir
-C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/serial/CMakeFiles/install/strip.dir
