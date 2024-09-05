@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ESP_UART",
-    "project_version":    "cdcd12eb-dirty",
+    "project_version":    "0052b8f0-dirty",
     "project_path":       "C:/Users/Nitro Tiger/ESP Project/ESP_UART",
     "idf_path":           "C:/esp/v5.3/esp-idf",
     "build_dir":          "C:/Users/Nitro Tiger/ESP Project/ESP_UART/build",
@@ -1165,7 +1165,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/Users/Nitro Tiger/ESP Project/ESP_UART/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/Nitro Tiger/ESP Project/ESP_UART/main/main.c" ],
+            "sources": [ "C:/Users/Nitro Tiger/ESP Project/ESP_UART/main/main.c", "C:/Users/Nitro Tiger/ESP Project/ESP_UART/main/serial.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
