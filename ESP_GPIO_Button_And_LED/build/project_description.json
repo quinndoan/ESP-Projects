@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ESP_GPIO_Button_And_LED",
-    "project_version":    "3df9da1b-dirty",
+    "project_version":    "690ac597-dirty",
     "project_path":       "C:/Users/Nitro Tiger/ESP Project/ESP_GPIO_Button_And_LED",
     "idf_path":           "C:/esp/v5.3/esp-idf",
     "build_dir":          "C:/Users/Nitro Tiger/ESP Project/ESP_GPIO_Button_And_LED/build",
