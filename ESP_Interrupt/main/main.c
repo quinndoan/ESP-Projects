@@ -5,7 +5,7 @@
 #include "freertos/task.h"
 #include "esp_log.h"
 
-xQueueHandle button_queue;
+xQueueSend button_queue;
 #define CONFIG_LOG_MAXIMUM_LEVEL 5
 
 void handle_button(void *p){
@@ -27,8 +27,8 @@ void handle_button(void *p){
 void gpio_isr_handle(void *p){
     gpio_intr_disable(GPIO_NUM_23);
     ESP_DRAM_LOGW("gpio_isr_handle","Entered interrupt");
-    bool curState =1;
-    xQueueSendFromISR(button_queue, &curState,pdFALSE);
+    // bool curState =1;
+    // xQueueSendFromISR(button_queue, &curState,pdFALSE);
     gpio_intr_enable(GPIO_NUM_23);
 }
 
@@ -42,7 +42,7 @@ void setup_button(){
     io_config->intr_type = GPIO_INTR_DISABLE;
     
     gpio_install_isr_service(0);
-    gpio_isr_handler_add(GPIO_NUM_23,gpio_isr_handle,NULL);
+    gpio_isr_(GPIO_NUM_23,gpio_isr_handle,NULL);
    //gpio_isr_register(gpio_isr_handle,NULL,0,NULL);
 }
 
