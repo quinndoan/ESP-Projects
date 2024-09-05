@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
 #include "driver/gpio.h"
-#include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
 
-xQueueSend button_queue;
+QueueHandle_t button_queue;
 #define CONFIG_LOG_MAXIMUM_LEVEL 5
 
 void handle_button(void *p){
@@ -27,8 +27,8 @@ void handle_button(void *p){
 void gpio_isr_handle(void *p){
     gpio_intr_disable(GPIO_NUM_23);
     ESP_DRAM_LOGW("gpio_isr_handle","Entered interrupt");
-    // bool curState =1;
-    // xQueueSendFromISR(button_queue, &curState,pdFALSE);
+    bool curState =1;
+    xQueueSendFromISR(button_queue, &curState,pdFALSE);
     gpio_intr_enable(GPIO_NUM_23);
 }
 
@@ -39,11 +39,11 @@ void setup_button(){
     io_config->mode = GPIO_MODE_INPUT;
     io_config->pull_up_en = GPIO_PULLUP_DISABLE;
     io_config->pull_down_en = GPIO_PULLDOWN_DISABLE;
-    io_config->intr_type = GPIO_INTR_DISABLE;
+    io_config->intr_type = GPIO_INTR_NEGEDGE;
     
-    gpio_install_isr_service(0);
-    gpio_isr_(GPIO_NUM_23,gpio_isr_handle,NULL);
-   //gpio_isr_register(gpio_isr_handle,NULL,0,NULL);
+     gpio_install_isr_service(0);
+     gpio_isr_handler_add(GPIO_NUM_23,gpio_isr_handle,NULL);
+   //gpio_isr_register(gpio_isr_handle,NULL,0,NULL);      // hàm phục vụ ngắt
 }
 
 void handle_leds(void *p){
