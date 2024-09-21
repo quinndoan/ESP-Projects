@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ESP_BLE_SPP_Acceptor",
-    "project_version":    "e51efd5f",
+    "project_version":    "35776ae5-dirty",
     "project_path":       "C:/Users/Nitro Tiger/ESP Project/ESP_BLE_SPP_Acceptor",
     "idf_path":           "C:/esp/v5.3/esp-idf",
     "build_dir":          "C:/Users/Nitro Tiger/ESP Project/ESP_BLE_SPP_Acceptor/build",

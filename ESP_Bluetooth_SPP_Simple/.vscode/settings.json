@@ -13,5 +13,10 @@
     ],
     "idf.portWin": "COM5",
     "idf.pythonBinPathWin": "c:\\espressif\\python_env\\idf5.3_py3.11_env\\Scripts\\python.exe",
-    "idf.toolsPathWin": "c:\\espressif"
+    "idf.toolsPathWin": "c:\\espressif",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "freertos.h": "c"
+    },
+    "idf.flashType": "UART"
 }
