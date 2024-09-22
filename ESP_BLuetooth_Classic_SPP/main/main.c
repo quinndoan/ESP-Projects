@@ -56,6 +56,20 @@ void spp_callback(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
     }
 }
 
+void send_message_task(void *param)
+{
+    while (true)
+    {
+        if (spp_handle != 0) // Kiểm tra xem đã có kết nối hay chưa
+        {
+            const char *message = "Hello from ESP32!";
+            esp_spp_write(spp_handle, strlen(message), (uint8_t *)message);
+            ESP_LOGI(TAG, "Sent message: %s", message);
+        }
+        vTaskDelay(pdMS_TO_TICKS(5000)); // Gửi mỗi 5 giây
+    }
+}
+
 void startBluetooth(void)
 {
     if (nvs_flash_init() != ESP_OK)
@@ -92,9 +106,10 @@ void startBluetooth(void)
 void app_main(void)
 {
     startBluetooth();
+    xTaskCreate(send_message_task, "Send Message Task", 4096, NULL, 5, NULL);
+
     while (true)
     {
         vTaskDelay(pdMS_TO_TICKS(1000)); 
     }
 }
-
