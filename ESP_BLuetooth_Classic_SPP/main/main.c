@@ -34,7 +34,6 @@ void spp_callback(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             data[param->data_ind.len] = '\0';
             ESP_LOGI(TAG, "Received data: %s", data);
             free(data);
-
             // Add to send and get response from phone
             esp_spp_write(spp_handle, strlen(MESSAGE), (uint8_t *)MESSAGE);
             ESP_LOGI(TAG, "Send a demo response: %s", MESSAGE);
@@ -42,12 +41,12 @@ void spp_callback(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
         break;
     }
 
-    case ESP_SPP_SRV_OPEN_EVT:  // Open connection for phone
+    case ESP_SPP_SRV_OPEN_EVT:  
         ESP_LOGI(TAG, "SPP connection opened");
         spp_handle = param->open.handle;  
         break;
 
-    case ESP_SPP_CLOSE_EVT:  // Connection closed
+    case ESP_SPP_CLOSE_EVT:  
         ESP_LOGI(TAG, "SPP connection closed");
         break;
 
@@ -60,13 +59,13 @@ void send_message_task(void *param)
 {
     while (true)
     {
-        if (spp_handle != 0) // Kiểm tra xem đã có kết nối hay chưa
+        if (spp_handle != 0) 
         {
             const char *message = "Hello from ESP32!";
             esp_spp_write(spp_handle, strlen(message), (uint8_t *)message);
             ESP_LOGI(TAG, "Sent message: %s", message);
         }
-        vTaskDelay(pdMS_TO_TICKS(5000)); // Gửi mỗi 5 giây
+        vTaskDelay(pdMS_TO_TICKS(5000)); 
     }
 }
 
@@ -98,6 +97,9 @@ void startBluetooth(void)
 
     esp_bt_pin_code_t pin_code = {'1', '2', '3', '4'};
     esp_bt_gap_set_pin(ESP_BT_PIN_TYPE_FIXED, 4, pin_code);
+
+   // esp_bt_gap_set_cod(ESP_BT_INIT_COD, ESP_BT_SET_COD_MAJOR_MINOR); // them setup timeout
+
 
     ESP_LOGI(TAG, "Bluetooth is initialized with name: myBluetooth");
 
