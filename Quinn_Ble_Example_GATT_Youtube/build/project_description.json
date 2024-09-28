@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "Quinn_Ble_Example_GATT_Youtube",
-    "project_version":    "ee68b202-dirty",
+    "project_version":    "e938faa65-dirty",
     "project_path":       "C:/Users/Nitro Tiger/ESP Project/Quinn_Ble_Example_GATT_Youtube",
     "idf_path":           "C:/esp/v5.3/esp-idf",
     "build_dir":          "C:/Users/Nitro Tiger/ESP Project/Quinn_Ble_Example_GATT_Youtube/build",

@@ -19,14 +19,14 @@
 
 #include "ble.h"
 
-const char *TAG = "Quinniu";
+const char *TAG = "QuinnSend";
 
 void app_ble_data_recv_callback(uint8_t *data, uint16_t length)
 {
     esp_log_buffer_hex(TAG, data,length);
 
     // truyền lên
-    app_ble_send_data((uint8_t *)"hello vantho",13);
+    app_ble_send_data((uint8_t *)"hello quinne",13);
 }
 
 void app_main(void)
