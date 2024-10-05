@@ -17,8 +17,8 @@
 
 static const int RX_BUF_SIZE = 1024;
 
-#define TXD_PIN (GPIO_NUM_1)
-#define RXD_PIN (GPIO_NUM_3)
+#define TXD_PIN (GPIO_NUM_17)
+#define RXD_PIN (GPIO_NUM_16)
 #define UART UART_NUM_2
 
 void init(void)
